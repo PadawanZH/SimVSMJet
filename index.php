@@ -5,6 +5,7 @@
  * Date: 15-11-5
  * Time: 下午4:59
  */
+header("Content-type: text/html; charset=utf-8");
 
 function send_post($url, $post_data)
 {
