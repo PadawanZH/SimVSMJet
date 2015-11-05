@@ -32,7 +32,7 @@ function send_post($url, $post_data)
 }
 
 $dataToPost = array(
-    'data' => '这是一个测试的句子，用来测试在线分词功能。',
+    'data' => '我讨厌中国，做个大死',
     'respond' => 'json',
     'ignore' => 'true'
 );
