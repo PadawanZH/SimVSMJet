@@ -38,15 +38,22 @@ class WordSplit
 
         $status = $de_json->status;
         $message = $de_json->message;
+        $result = array();
         if ($status == 'ok') {
-            $words = $de_json->words;
-            var_dump($words);
-            echo '<br/>';
-            foreach ($words as $word) {
-                echo $word->word . ' ';
+            $all_words = $de_json->words;
+
+            //var_dump($all_words);
+            //echo '<br/>';
+
+            foreach ($all_words as $word) {
+                if ($word->idf != 0) {
+                    array_push($result, $word);
+                }
             }
         } else {
-            echo $message;
+            array_push($result, $message);
         }
+
+        return $result;
     }
 }
