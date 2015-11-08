@@ -1,0 +1,21 @@
+a, p, button, label {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-image: url("../Picture/018.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    margin-top: 8%;
+}
+
+.btn-control {
+    margin: 10%;
+}
+
+.btn-success {
+    margin-right: 20%;
+}
