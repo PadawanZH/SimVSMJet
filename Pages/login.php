@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head lang="zh-CN">
     <meta charset="UTF-8">
     <title>计算查询相似度</title>
     <link rel="stylesheet" href="../BootStrap/dist/css/bootstrap.min.css">
@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="header"></div>
-<div class="container col-md-3 col-md-offset-1">
+<div class="container col-md-4 col-md-offset-4">
     <form method="post" action="login">
         <div class="form-group">
             <label>查询一</label>
@@ -26,7 +26,7 @@
     </form>
 </div>
 
-<div class="container col-md-5 col-md-offset-1">
+<div class="container col-md-4 col-md-offset-4">
     <!--填写结果区域 -->
 </div>
 
