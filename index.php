@@ -7,10 +7,19 @@
  */
 namespace SimVSMJet;
 include 'Class/WordSplit.php';
+include 'Class/SimCalculator.php';
 header("Content-type: text/html; charset=utf-8");
 
 $sentence = '周杰伦是一个歌手，不是一个演员。';
 $wordSplit = new WordSplit($sentence);
-$result = $wordSplit->send_post();
+$result1 = $wordSplit->send_post();
 
-var_dump($result);
+$sentence = '周杰伦是一个歌手';
+$wordSplit = new WordSplit($sentence);
+$result2 = $wordSplit->send_post();
+
+$simcal = new SimCalculator($result1, $result2);
+$innerProduct = $simcal->getSimResult("InnerProduct");
+$cosine = $simcal->getSimResult("Cosine");
+$jaccard = $simcal->getSimResult("Jaccard");
+echo $innerProduct . "  " . $cosine . "  " . $jaccard;
