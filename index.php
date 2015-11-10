@@ -6,8 +6,8 @@
  * Time: 下午4:59
  */
 namespace SimVSMJet;
-include 'Class/WordSplit.php';
-include 'Class/SimCalculator.php';
+include 'Class/Func/WordSplit.php';
+include 'Class/Func/SimCalculator.php';
 header("Content-type: text/html; charset=utf-8");
 
 $sentence = '周杰伦是一个歌手，不是一个演员。';

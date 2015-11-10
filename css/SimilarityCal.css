@@ -3,7 +3,7 @@ a, p, button, label {
 }
 
 body {
-    background-image: url("../Picture/018.jpg");
+
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -22,4 +22,13 @@ body {
 
 .resultArea {
     margin-top: 4%;
+}
+
+.error {
+    color: #ff0025;
+}
+
+#simResult{
+    font-size : 20px;
+    color: #1dff1f;
 }

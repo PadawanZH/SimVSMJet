@@ -39,10 +39,11 @@ class SimCalculator
         $this->loadVector($firstTermArray, $this->secVector, false);
         $this->loadVector($secTermArray, $this->secVector, true);
 
-        echo '<br />';
+        echo '<div  style="font-size: 20px;color: #ff0025">';
         var_dump($this->firstVector);
         echo '<br />';
         var_dump($this->secVector);
+        echo '</div>';
     }
 
     function clearVectors()
