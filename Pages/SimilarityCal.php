@@ -60,8 +60,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </div>
 <?php
+//计算相似度
 function computeTheSimValue()
 {
+    //分词，得到词项
     $sentence = $_POST["Query1"];
     $wordSplit = new WordSplit($sentence);
     $result1 = $wordSplit->send_post();
@@ -71,11 +73,14 @@ function computeTheSimValue()
     $result2 = $wordSplit->send_post();
 
     $simcal = new SimCalculator($result1, $result2);
+    //内积
     $innerProduct = $simcal->getSimResult("InnerProduct");
+    //余弦
     $cosine = $simcal->getSimResult("Cosine");
+    //Jaccard
     $jaccard = $simcal->getSimResult("Jaccard");
 
-
+    //打印结果
     echo '<br /> InnerProduct : ' . $innerProduct . '<br />';
     echo '<br /> Cosine : ' . $cosine . '<br />';
     echo '<br /> Jaccard : ' . $jaccard . '<br />';

@@ -46,6 +46,7 @@ class SimCalculator
         echo '</div>';
     }
 
+    //清空向量
     function clearVectors()
     {
         $this->firstVector = array();
@@ -53,7 +54,7 @@ class SimCalculator
     }
 
     /**
-     * call this func to get the result of Two Array
+     * 根据输入调用相应的相似度计算方法，并获取结果。
      * @param $SimKind {"InnerProduct" , "Cosine" , "Jaccard"}
      */
     function getSimResult($SimKind)
@@ -69,6 +70,7 @@ class SimCalculator
         }
     }
 
+    //内积计算
     private function InnerProduct($vector1, $vector2)
     {
         $result = 0.0;
@@ -78,6 +80,7 @@ class SimCalculator
         return $result;
     }
 
+    //余弦计算
     private function Cosine($vector1, $vector2)
     {
         $innerProduct = $this->InnerProduct($vector1, $vector2);
@@ -86,6 +89,7 @@ class SimCalculator
         return $result;
     }
 
+    //Jaccard计算
     private function Jaccard($vector1, $vector2)
     {
         $innerProduct = $this->InnerProduct($vector1, $vector2);
@@ -94,6 +98,7 @@ class SimCalculator
         return $result;
     }
 
+    //平方和
     private function QuadraticSum($vector)
     {
         $result = 0.0;
