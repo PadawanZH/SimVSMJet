@@ -47,7 +47,9 @@ class WordSplit
 
             foreach ($all_words as $word) {
                 if ($word->idf != 0) {
-                    array_push($result, $word);
+                    //array_push($result, $word);
+                    //$all_words.count();
+                    $item = new word_item($word->word, $word->off, $word->len, $tf, $word->idf, $word->attr);
                 }
             }
         } else {
