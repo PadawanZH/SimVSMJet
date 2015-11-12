@@ -11,11 +11,43 @@ namespace SimVSMJet;
 
 class SimCalculator
 {
-    private $firstVector, $secVector;
 
-    function __construct($firstTermArray, $secTermArray)
+    /**
+     *
+     * @param $queryArray
+     * @param $DocID
+     * @param $innerProduct
+     * @param $cosine
+     * @param $Jaccard
+     */
+    public function GetSimWithQuery($queryArray, $DocID, &$innerProduct, &$cosine, &$Jaccard){
+        $firstVector = array();
+        $this->loadVector($queryArray, $firstVector, true);
+
+    }
+
+    function getSimWithTwoTermArrays($firstTermArray, $secTermArray, &$innerProduct, &$cosine, &$Jaccard)
     {
-        $this->resetTheContents($firstTermArray, $secTermArray);
+
+        $firstVector = array();
+        $secVector = array();
+        $this->loadVector($firstTermArray, $firstVector, true);
+        $this->loadVector($secTermArray, $firstVector, false);
+        $this->loadVector($firstTermArray, $secVector, false);
+        $this->loadVector($secTermArray, $tsecVector, true);
+
+        echo '<div  style="font-size: 20px;color: #ff0025">';
+        var_dump($firstVector);
+        echo '<br />';
+        var_dump($secVector);
+        echo '</div>';
+
+        $innerProduct = $this->InnerProduct($firstVector,$secVector);
+        $cosine = $this->Cosine($firstVector,$secVector);
+        $Jaccard = $this->Jaccard($firstVector, $secVector);
+    }
+
+    function __construct($firstTermArray, $secTermArray){
     }
 
     private function loadVector($termArray, &$termVector, $myTerm)
@@ -28,45 +60,6 @@ class SimCalculator
             } else if ($myTerm == false && !array_key_exists($item->word, $termVector)) {
                 $termVector[$item->word] = 0;
             }
-        }
-    }
-
-    function resetTheContents($firstTermArray, $secTermArray)
-    {
-        $this->clearVectors();
-        $this->loadVector($firstTermArray, $this->firstVector, true);
-        $this->loadVector($secTermArray, $this->firstVector, false);
-        $this->loadVector($firstTermArray, $this->secVector, false);
-        $this->loadVector($secTermArray, $this->secVector, true);
-
-        echo '<div  style="font-size: 20px;color: #ff0025">';
-        var_dump($this->firstVector);
-        echo '<br />';
-        var_dump($this->secVector);
-        echo '</div>';
-    }
-
-    //清空向量
-    function clearVectors()
-    {
-        $this->firstVector = array();
-        $this->secVector = array();
-    }
-
-    /**
-     * 根据输入调用相应的相似度计算方法，并获取结果。
-     * @param $SimKind {"InnerProduct" , "Cosine" , "Jaccard"}
-     */
-    function getSimResult($SimKind)
-    {
-        if ($SimKind == "InnerProduct") {
-            return $this->InnerProduct($this->firstVector, $this->secVector);
-        } else if ($SimKind == "Cosine") {
-            return $this->Cosine($this->firstVector, $this->secVector);
-        } else if ($SimKind == "Jaccard") {
-            return $this->Jaccard($this->firstVector, $this->secVector);
-        } else {
-            return "No_Such_Way";
         }
     }
 

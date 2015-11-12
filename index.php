@@ -10,7 +10,7 @@ include 'Class/Func/WordSplit.php';
 include 'Class/Func/SimCalculator.php';
 header("Content-type: text/html; charset=utf-8");
 
-$sentence = '周杰伦是一个歌手，周杰伦不是一个演员。';
+$sentence = '周杰伦是一个歌手，不是一个演员。';
 $wordSplit = new WordSplit($sentence);
 $result1 = $wordSplit->send_post();
 
