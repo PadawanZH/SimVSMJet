@@ -6,7 +6,7 @@
  * Time: 下午5:55
  */
 namespace SimVSMJet;
-include 'word_item.php';
+include 'WordItem.php';
 class WordSplit
 {
     private $data_to_post = array(
@@ -56,7 +56,7 @@ class WordSplit
                             $tf++;
                         }
                     }
-                    $item = new word_item($word->word, $word->off, $word->len, $tf, $word->idf, $word->attr);
+                    $item = new WordItem($word->word, $word->off, $word->len, $tf, $word->idf, $word->attr);
                     array_push($result, $item);
                 }
             }

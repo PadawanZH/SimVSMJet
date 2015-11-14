@@ -7,7 +7,7 @@
  */
 namespace SimVSMJet;
 
-class word_item
+class WordItem
 {
     public $word, $off, $len, $tf, $idf, $attr;
 
