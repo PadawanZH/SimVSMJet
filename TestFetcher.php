@@ -7,8 +7,9 @@ class PageClawler extends Phpfetcher_Crawler_Default{
         // TODO: Implement handlePage() method.
         $res = $objPage->sel('//span[@class=\'title\']'); //使用的是xpath
         for ($i = 0; $i < count($res); ++$i) {
-            echo $res[$i]->plaintext;
-            echo "\n";
+            //echo $res[$i]->plaintext;
+            var_dump($res[$i]);
+            echo "<br/>";
         }
     }
 }
@@ -45,7 +46,7 @@ $pageJobs = array(
              * 所有在这里列出的正则规则，只要能匹配到超链接，那么那条爬虫就会爬到那条超链接
              * Regex rules are listed here, the crawler will follow any hyperlinks once the regex matches
              */
-            '#movie\.douban\.com/top250\?start=\d+.+#',
+            '#\?start=\d+.+#',
         ),
         //爬虫从开始页面算起，最多爬取的深度，设置为1表示只爬取起始页面
         //Crawler's max following depth, 1 stands for only crawl the start page
