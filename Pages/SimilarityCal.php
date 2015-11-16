@@ -73,12 +73,10 @@ function computeTheSimValue()
     $result2 = $wordSplit->send_post();
 
     $simcal = new SimCalculator($result1, $result2);
-    //内积
-    $innerProduct = $simcal->getSimResult("InnerProduct");
-    //余弦
-    $cosine = $simcal->getSimResult("Cosine");
-    //Jaccard
-    $jaccard = $simcal->getSimResult("Jaccard");
+    $innerProduct = "";
+    $cosine = "";
+    $jaccard = "";
+    $simcal->getSimWithTwoTermArrays($result1,$result2,$innerProduct,$cosine,$jaccard);
 
     //打印结果
     echo '<br /> InnerProduct : ' . $innerProduct . '<br />';

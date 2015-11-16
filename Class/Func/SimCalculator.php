@@ -33,8 +33,8 @@ class SimCalculator
         $secVector = array();
         $this->loadVector($firstTermArray, $firstVector, true);
         $this->loadVector($secTermArray, $firstVector, false);
+        $this->loadVector($secTermArray, $secVector, true);
         $this->loadVector($firstTermArray, $secVector, false);
-        $this->loadVector($secTermArray, $tsecVector, true);
 
         echo '<div  style="font-size: 20px;color: #ff0025">';
         var_dump($firstVector);
