@@ -25,6 +25,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 <div class="header"></div>
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <ul class="nav">
+                <li class="active"><a href="./SearchPage.php">MainSearch</a></li>
+                <li><a href="#">Similarity Calculator</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 <div class="container col-md-10 col-md-offset-1">
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <div class="form-group">
@@ -101,8 +112,15 @@ function computeTheSimValue()
 }
 
 ?>
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted"> <a href="./SearchPage.php">About us</a></p>
+    </div>
+</footer>
 </body>
 <link rel="stylesheet" href="../BootStrap/dist/css/bootstrap.min.css">
 <link href="../css/SimilarityCal.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/stick-footer.css">
+<link rel="stylesheet" href="../css/NavigateBar.css">
 </html>
 

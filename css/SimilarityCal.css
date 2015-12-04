@@ -1,11 +1,11 @@
-a, p, button, label {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+html {
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-    background-image: url("../Picture/018.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
 
 .container {

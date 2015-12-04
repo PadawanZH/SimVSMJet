@@ -8,7 +8,6 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head lang="zh-CN">
@@ -18,6 +17,17 @@
 </head>
 <body>
     <div class="header"></div>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav">
+                    <li><a href="#">MainSearch</a></li>
+                    <li class="active"><a href="./SimilarityCal.php">Similarity Calculator</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div id="SearchFormArea">
         <form id="form" name="search" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <div class="iconDiv row">
@@ -82,4 +92,5 @@
 <link rel="stylesheet" href="../BootStrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/SearchPage.css">
 <link rel="stylesheet" href="../css/stick-footer.css">
+<link rel="stylesheet" href="../css/NavigateBar.css">
 </html>
