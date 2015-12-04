@@ -1,0 +1,32 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+.iconDiv {
+    margin-top: 8%;
+}
+
+.searchFormDiv {
+    margin-top: 3%;
+}
+
+.selectDiv {
+    margin-top: 1%;
+}
+
+.resultArea {
+    margin-top: 3%;
+}
+
+.resultObject {
+    margin-top: 1%;
+}
+
+term {
+    font-style: normal;
+    color: #C00;
+}

@@ -20,13 +20,12 @@ class SimCalculator
      * @param $cosine
      * @param $Jaccard
      */
-    public function GetSimWithQuery($queryArray, $DocID, &$innerProduct, &$cosine, &$Jaccard){
+    public function GetSimWithQuery($queryArray, $DocID, &$innerProduct, &$cosine, &$jaccard){
         $firstVector = array();
         $this->loadVector($queryArray, $firstVector, true);
-
     }
 
-    function getSimWithTwoTermArrays($firstTermArray, $secTermArray, &$innerProduct, &$cosine, &$Jaccard)
+    function getSimWithTwoTermArrays($firstTermArray, $secTermArray, &$innerProduct, &$cosine, &$jaccard)
     {
 
         $firstVector = array();
@@ -36,7 +35,7 @@ class SimCalculator
         $this->loadVector($secTermArray, $secVector, true);
         $this->loadVector($firstTermArray, $secVector, false);
 
-        echo '<div  style="font-size: 20px;color: #ff0025">';
+        echo '<div class="resultArea col-md-12" style="font-size: 20px;color: #ff0025">';
         var_dump($firstVector);
         echo '<br />';
         var_dump($secVector);
@@ -44,7 +43,7 @@ class SimCalculator
 
         $innerProduct = $this->InnerProduct($firstVector,$secVector);
         $cosine = $this->Cosine($firstVector,$secVector);
-        $Jaccard = $this->Jaccard($firstVector, $secVector);
+        $jaccard = $this->Jaccard($firstVector, $secVector);
     }
 
     function __construct($firstTermArray, $secTermArray){
@@ -54,9 +53,9 @@ class SimCalculator
     {
         foreach ($termArray as $item) {
             if ($myTerm == true && array_key_exists($item->word, $termVector)) {
-                $termVector[$item->word]++;
+                $termVector[$item->word] += $item->idf;
             } else if ($myTerm == true) {
-                $termVector[$item->word] = 1;
+                $termVector[$item->word] = $item->idf;
             } else if ($myTerm == false && !array_key_exists($item->word, $termVector)) {
                 $termVector[$item->word] = 0;
             }

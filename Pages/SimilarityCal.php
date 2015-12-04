@@ -67,22 +67,37 @@ function computeTheSimValue()
     $sentence = $_POST["Query1"];
     $wordSplit = new WordSplit($sentence);
     $result1 = $wordSplit->send_post();
-
+    echo '<div class="resultArea col-md-12" style="font-size: 30px;color: #ff0025">';
+    echo 'Query1 : ' . $sentence . '<br />';
     $sentence = $_POST["Query2"];
     $wordSplit = new WordSplit($sentence);
     $result2 = $wordSplit->send_post();
+
+    echo 'Query2 : ' . $sentence . '<br />';
+    echo '</div>';
 
     $simcal = new SimCalculator($result1, $result2);
     $innerProduct = "";
     $cosine = "";
     $jaccard = "";
-    $simcal->getSimWithTwoTermArrays($result1,$result2,$innerProduct,$cosine,$jaccard);
-
+    $simcal->getSimWithTwoTermArrays($result1, $result2, $innerProduct, $cosine, $jaccard);
+    echo '<div class="resultArea col-md-12" style="font-size: 30px;color: #ff0025">';
     //打印结果
-    echo '<br /> InnerProduct : ' . $innerProduct . '<br />';
-    echo '<br /> Cosine : ' . $cosine . '<br />';
-    echo '<br /> Jaccard : ' . $jaccard . '<br />';
-
+    echo '<table class="table table-condensed">';
+    echo '<tr>';
+    echo '<th> Compute Type </th> <th> Value </th>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<th> InnerProduct </th> <th>' . $innerProduct . ' </th>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<th> Cosine </th> <th>' . $cosine . ' </th>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<th> Jaccard </th> <th>' . $jaccard . ' </th>';
+    echo '</tr>';
+    echo '</table>';
+    echo '</div>';
 }
 
 ?>
