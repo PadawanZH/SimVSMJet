@@ -20,9 +20,16 @@ class SimCalculator
      * @param $cosine
      * @param $Jaccard
      */
-    public function GetSimWithQuery($queryArray, $DocID, &$innerProduct, &$cosine, &$jaccard){
-        $firstVector = array();
-        $this->loadVector($queryArray, $firstVector, true);
+    public function GetSimOfTwoVector($firVector, $secVector, $simType)
+    {
+        switch ($simType) {
+            case 'innerProduct' :
+                return $this->InnerProduct($firVector, $secVector);
+            case '$cosine':
+                return $this->Cosine($firVector, $secVector);
+            case '$jaccard':
+                return $this->Jaccard($firVector, $secVector);
+        }
     }
 
     function getSimWithTwoTermArrays($firstTermArray, $secTermArray, &$innerProduct, &$cosine, &$jaccard)
@@ -46,10 +53,11 @@ class SimCalculator
         $jaccard = $this->Jaccard($firstVector, $secVector);
     }
 
-    function __construct($firstTermArray, $secTermArray){
+    function __construct()
+    {
     }
 
-    private function loadVector($termArray, &$termVector, $myTerm)
+    public function loadVector($termArray, &$termVector, $myTerm)
     {
         foreach ($termArray as $item) {
             if ($myTerm == true && array_key_exists($item->word, $termVector)) {

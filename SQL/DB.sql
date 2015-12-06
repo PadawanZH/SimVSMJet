@@ -46,11 +46,11 @@ CREATE TABLE IF NOT EXISTS doc_contentTerms
     CONSTRAINT FOREIGN KEY (WORD) REFERENCES contentTerms(WORD)
 );
 
-load data infile "/home/tevenfeng/Coding/php/TxtIntoSql/document.txt" IGNORE into table document fields terminated by "," lines terminated by "\n"; 
-load data infile "/home/tevenfeng/Coding/php/TxtIntoSql/titleTerms.txt" IGNORE into table titleTerms fields terminated by "," lines terminated by "\n";
-load data infile "/home/tevenfeng/Coding/php/TxtIntoSql/contentTerms.txt" IGNORE into table contentTerms fields terminated by "," lines terminated by "\n";
-load data infile "/home/tevenfeng/Coding/php/TxtIntoSql/doc_titleTerms.txt" IGNORE into table doc_titleTerms fields terminated by "," lines terminated by "\n";
-load data infile "/home/tevenfeng/Coding/php/TxtIntoSql/doc_contentTerms.txt" IGNORE into table doc_contentTerms fields terminated by "," lines terminated by "\n";
+LOAD DATA LOCAL INFILE '/home/zhangan/Workspace/TxtIntoSql/document.txt' IGNORE INTO TABLE document FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/home/zhangan/Workspace/TxtIntoSql/titleTerms.txt' IGNORE INTO TABLE titleTerms FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/home/zhangan/Workspace/TxtIntoSql/contentTerms.txt' IGNORE INTO TABLE contentTerms FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/home/zhangan/Workspace/TxtIntoSql/doc_titleTerms.txt' IGNORE INTO TABLE doc_titleTerms FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+LOAD DATA LOCAL INFILE '/home/zhangan/Workspace/TxtIntoSql/doc_contentTerms.txt' IGNORE INTO TABLE doc_contentTerms FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 select * from document;
 select * from titleTerms;

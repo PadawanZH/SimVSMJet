@@ -87,7 +87,7 @@ function computeTheSimValue()
     echo 'Query2 : ' . $sentence . '<br />';
     echo '</div>';
 
-    $simcal = new SimCalculator($result1, $result2);
+    $simcal = new SimCalculator();
     $innerProduct = "";
     $cosine = "";
     $jaccard = "";
