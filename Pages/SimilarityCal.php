@@ -60,15 +60,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <div class="resultArea col-md-10 col-md-offset-1">
     <!--填写结果区域 -->
-    <div class="resultArea col-md-12" style="font-size: 30px;color: #ff0025">
-        <?php
-        if ($_POST["SUB"] == true && $Err == "") {
-            computeTheSimValue();
-        } else {
-            echo '<b>' . "result to show" . '</b>';
-        }
-        ?>
-    </div>
+
+    <?php
+    if ($_POST["SUB"] == true && $Err == "") {
+        computeTheSimValue();
+    } else {
+        echo '<b>' . "result to show" . '</b>';
+    }
+    ?>
+
 </div>
 <?php
 //计算相似度
