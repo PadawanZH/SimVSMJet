@@ -41,6 +41,7 @@ class MainSearch
 
         //get True content of topN resList
 
+
         return $resList;
     }
 
@@ -51,7 +52,8 @@ class MainSearch
      */
     private function SelDocByQueryTerm($queryTermArray)
     {
-        return null;
+        $docmentquery = new DocumentQuery($queryTermArray);
+        return $docmentquery->getDocuments();
     }
 
     private function formDocsVectorList($termsDocList)
