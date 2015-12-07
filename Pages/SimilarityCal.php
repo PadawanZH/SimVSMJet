@@ -1,5 +1,5 @@
 <?php
-namespace SimVSMJet;
+
 include '../Class/Func/WordSplit.php';
 include '../Class/Func/SimCalculator.php';
 

@@ -6,7 +6,7 @@
  * Date: 15-12-4
  * Time: 上午10:56
  */
-namespace SimVSMJet;
+
 $dir = dirname(__FILE__);
 include $dir . '../Func/SimCalculator.php';
 

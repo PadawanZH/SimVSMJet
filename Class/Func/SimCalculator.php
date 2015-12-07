@@ -6,9 +6,6 @@
  * Time: 下午7:10
  */
 
-namespace SimVSMJet;
-
-
 class SimCalculator
 {
 

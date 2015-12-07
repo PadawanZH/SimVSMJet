@@ -5,7 +5,7 @@
  * Date: 15-11-6
  * Time: 下午5:55
  */
-namespace SimVSMJet;
+
 include 'WordItem.php';
 
 class WordSplit
@@ -57,7 +57,7 @@ class WordSplit
                             $tf++;
                         }
                     }
-                    $item = new WordItem($word->word, $word->off, $word->len, $tf / $wordCount, $word->idf, $word->attr);
+                    $item = new WordItem($word->word, $word->len, $tf / $wordCount, $word->idf, $word->attr);
                     array_push($result, $item);
                 }
             }
