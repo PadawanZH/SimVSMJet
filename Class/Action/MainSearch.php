@@ -1,14 +1,13 @@
 <?php
 
+include 'Class/Func/DocumentQuery.php';
+include 'Class/Func/SimCalculator.php';
 /**
  * Created by PhpStorm.
  * User: zhangan
  * Date: 15-12-4
  * Time: 上午10:56
  */
-
-$dir = dirname(__FILE__);
-include $dir . '../Func/SimCalculator.php';
 
 class MainSearch
 {
@@ -125,6 +124,8 @@ class MainSearch
         $resList = array();
 
         $requestList = array_slice($requestList, 0, $N);
+
+        var_dump($requestList);
         foreach ($requestList as $docID => $item) {
             $resList[$docID] = $item['simVal'];
         }

@@ -7,8 +7,9 @@
  */
 
 include 'Class/Func/WordSplit.php';
-include 'Class/Func/SimCalculator.php';
+
 include 'Class/Action/MainSearch.php';
+
 header("Content-type: text/html; charset=utf-8");
 
 $mainSearch = new MainSearch();

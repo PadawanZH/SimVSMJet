@@ -44,7 +44,6 @@ class DocumentQuery
             $term_docList[$queryItem->word] = $docList;
         }
         //var_dump($term_docList);
-
         return $term_docList;
     }
 }
