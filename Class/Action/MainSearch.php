@@ -1,7 +1,8 @@
 <?php
 
-include 'Class/Func/DocumentQuery.php';
-include 'Class/Func/SimCalculator.php';
+$dir = dirname(__file__);
+include $dir . '/../Func/DocumentQuery.php';
+include $dir . '/../Func/SimCalculator.php';
 /**
  * Created by PhpStorm.
  * User: zhangan

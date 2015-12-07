@@ -13,4 +13,4 @@ include 'Class/Action/MainSearch.php';
 header("Content-type: text/html; charset=utf-8");
 
 $mainSearch = new MainSearch();
-var_dump($mainSearch->search("马克西莫夫,斯维尔德洛夫斯克州", "innerProduct", "simVal", 100));
+var_dump($mainSearch->search("俄罗斯", "innerProduct", "simVal", 100));
