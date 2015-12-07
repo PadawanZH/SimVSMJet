@@ -1,8 +1,11 @@
 <?php
 
 $dir = dirname(__file__);
-include $dir . '/../Func/DocumentQuery.php';
-include $dir . '/../Func/SimCalculator.php';
+require_once $dir . '/../Func/DocumentQuery.php';
+require_once $dir . '/../Func/SimCalculator.php';
+require_once $dir . '/../Func/DocumentContent.php';
+require_once $dir . '/../Func/WordSplit.php';
+
 /**
  * Created by PhpStorm.
  * User: zhangan
@@ -36,11 +39,11 @@ class MainSearch
         $this->assignSimValue($queryTermArray, $resList, $simType);
 
         $this->sortResultList($resList, $sortBy);
-
         $resList = $this->getTopNResult($resList, $topN);
 
         //get True content of topN resList
-
+        $docmentContent = new DocumentContent($resList);
+        $resList = $docmentContent->getDocumentContents();
 
         return $resList;
     }
@@ -91,31 +94,31 @@ class MainSearch
     {
         switch ($sortBy) {
             case 'simVal' :
-                usort($resultList, "docComparator_simVal");
+                uasort($resultList, array($this, 'docComparator_simVal'));
                 break;
             case 'time' :
-                usort($resultList, "docComparator_time");
+                uasort($resultList, array($this, 'docComparator_time'));
         }
     }
 
     function docComparator_time($a, $b)
     {
-        if ($a->time > $b->time) {
+        if ($a['time'] > $b['time']) {
             return 1;
-        } else if ($a->time < $b->time) {
+        } else if ($a['time'] < $b['time']) {
             return -1;
-        } else if ($a->time == $b->time) {
+        } else if ($a['time'] == $b['time']) {
             return 0;
         }
     }
 
     function docComparator_simVal($a, $b)
     {
-        if ($a->simVal > $b->simVal) {
+        if ($a['simVal'] > $b['simVal']) {
             return -1;
-        } else if ($a->simVal < $b->simVal) {
+        } else if ($a['simVal'] < $b['simVal']) {
             return 1;
-        } else if ($a->simVal == $b->simVal) {
+        } else if ($a['simVal'] == $b['simVal']) {
             return 0;
         }
     }
@@ -124,9 +127,8 @@ class MainSearch
     {
         $resList = array();
 
-        $requestList = array_slice($requestList, 0, $N);
+        $requestList = array_slice($requestList, 0, $N, true);
 
-        var_dump($requestList);
         foreach ($requestList as $docID => $item) {
             $resList[$docID] = $item['simVal'];
         }

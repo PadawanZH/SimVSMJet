@@ -10,12 +10,11 @@ include 'Class/Func/WordSplit.php';
 
 include 'Class/Action/MainSearch.php';
 
-header("Content-type: text/html; charset=utf-8");
+header("Location: http://localhost:9000/Pages/SearchPage.php");
+/*
 
-//$mainSearch = new MainSearch();
-//var_dump($mainSearch->search("俄罗斯", "innerProduct", "simVal", 100));
-
-include 'Class/Func/DocumentContent.php';
+*/
+/*include 'Class/Func/DocumentContent.php';
 
 $test = new DocumentContent(["2660333" => 9.0, "2692956" => 10.0]);
-$test->getDocumentContents();
+$test->getDocumentContents();*/

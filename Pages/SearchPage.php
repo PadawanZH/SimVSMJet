@@ -5,7 +5,8 @@
  * Date: 15-12-3
  * Time: 上午10:32
  */
-
+$dir = dirname(__file__);
+require_once $dir . '/../Class/Action/MainSearch.php';
 ?>
 
 <!DOCTYPE html>
@@ -29,16 +30,18 @@
         </div>
     </div>
     <div id="SearchFormArea">
-        <form id="form" name="search" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <div class="iconDiv row">
             <span class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-4 col-xs-2 col-xs-offset-3">
-                <img hidefocus="true" src="//www.baidu.com/img/bd_logo1.png" width="270" height="128">
+                <img hidefocus="true" src="//img1.gtimg.com/edu/pics/hv1/122/126/1929/125465477.jpg" width="400"
+                     height="128">
             </span>
         </div>
 
         <div class="searchFormDiv row input-group-lg">
             <span class="col-lg-5 col-lg-offset-3 col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-2 col-xs-5 col-xs-offset-2">
-                <input id="Query" name="wd" class="form-control input-lg" value="" maxlength="255" autocomplete="off" placeholder="input query expression">
+                <input id="Query" name="Query" class="form-control input-lg" value="" maxlength="255" autocomplete="off"
+                       placeholder="input query expression">
             </span>
             <span class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                 <input type="submit" id="su" value="开始搜索" class="btn btn-lg btn-primary">
@@ -49,19 +52,20 @@
         <div class="row selectDiv">
             <div class="col-lg-3 col-lg-offset-3 col-md-3 col-md-offset-3 col-sm-3 col-sm-offset-3 col-xs-3 col-xs-offset-3">
                 <label class="control-label">相似度计算方式</label>
-                <select class="input-xlarge">
-                    <option>Inner product</option>
-                    <option>Cosine</option>
-                    <option>Jaccard</option>
+                <select class="input-xlarge" name="simType">
+                    <option value="innerProduct">Inner product</option>
+                    <option value="cosine">Cosine</option>
+                    <option value="jaccard">Jaccard</option>
                 </select>
             </div>
 
 
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <label class="control-label">排序方式</label>
-                <select class="input-xlarge">
-                    <option>相似度从高到底</option>
-                    <option>时间从近到远</option>
+                <label class="control-label">结果最大限制</label>
+                <select class="input-xlarge" name="topN">
+                    <option value="100">100</option>
+                    <option value="1000">1000</option>
+                    <option value="100000">不限制</option>
                 </select>
             </div>
 
@@ -71,9 +75,20 @@
 
     <?php
     if ($_POST["SUB"] == true) {
+        $queryString = $_POST["Query"];
+        $simType = $_POST["simType"];
+        $sortBy = "simVal";
+        $topN = $_POST["topN"];
+
+        $mainSearch = new MainSearch();
+        $resList = array();
+        $resList = $mainSearch->search($queryString, $simType, $sortBy, $topN);
+
+        foreach ($resList as $docID => $item) {
         ?>
-        <div class="resultObject row" id="3" srcid="1599">
-            <h3 class="t"><a href="http://www.baidu.com" target="_blank">Answer's Name</a></h3>
+            <div class="resultObject row" id="<?php echo $docID ?>">
+                <h3 class="t"><a href="<?php echo 'http://' . $item['url'] ?>"
+                                 target="_blank"><?php echo $item['title'] ?></a></h3>
 
             <div class="c-abstract">
                 <p>
@@ -90,13 +105,12 @@
                 </p>
             </div>
         </div>
+
         <?php
-    } else {
-        echo '<b>' . "result to show" . '</b>';
+        }
     }
     ?>
     </div>
-
     <footer class="footer">
         <div class="container">
             <p class="text-muted"> <a href="./SearchPage.php">About us</a></p>

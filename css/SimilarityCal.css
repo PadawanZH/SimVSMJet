@@ -8,6 +8,10 @@ body {
     margin-bottom: 60px;
 }
 
+.Form_container {
+    margin: 8%;
+}
+
 .btn-control {
     margin: 2%;
 }

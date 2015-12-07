@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="header"></div>
 <div class="navbar">
     <div class="navbar-inner">
-        <div class="container">
+        <div class="Nav_container">
             <ul class="nav">
                 <li class="active"><a href="./SearchPage.php">MainSearch</a></li>
                 <li><a href="#">Similarity Calculator</a></li>
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 </div>
-<div class="container col-md-10 col-md-offset-1">
+<div class="Form_container col-md-10 col-md-offset-1">
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <div class="form-group">
             <label>查询一</label>
