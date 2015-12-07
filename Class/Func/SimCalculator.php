@@ -25,10 +25,12 @@ class SimCalculator
         switch ($simType) {
             case 'innerProduct' :
                 return $this->InnerProduct($firVector, $secVector);
-            case '$cosine':
+            case 'cosine':
                 return $this->Cosine($firVector, $secVector);
-            case '$jaccard':
+            case 'jaccard':
                 return $this->Jaccard($firVector, $secVector);
+            default:
+                return 'NULL';
         }
     }
 
@@ -57,6 +59,11 @@ class SimCalculator
     {
     }
 
+    /**
+     * @param $termArray
+     * @param $termVector   array(word=>tf*idf) value : tf * idf
+     * @param $myTerm       boolean
+     */
     public function loadVector($termArray, &$termVector, $myTerm)
     {
         foreach ($termArray as $item) {
@@ -75,7 +82,9 @@ class SimCalculator
     {
         $result = 0.0;
         foreach ($vector1 as $index => $item) {
-            $result += $item * $vector2[$index];
+            if (array_key_exists($index, $vector2)) {
+                $result += $item * $vector2[$index];
+            }
         }
         return $result;
     }

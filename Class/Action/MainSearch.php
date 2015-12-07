@@ -29,14 +29,15 @@ class MainSearch
         $wordSplit = new WordSplit($queryString);
         $queryTermArray = $wordSplit->send_post();
 
-        $simCalculator = new SimCalculator();
-        $queryVector = array();
-        $simCalculator->loadVector($queryTermArray, $queryVector, true);
+        $termsDocList = $this->SelDocByQueryTerm($queryTermArray);
 
-        $resList = $this->SelDocByQueryTerm($queryTermArray);
-        $this->assignSimValue($queryVector, $resList);
+        $resList = $this->formDocsVectorList($termsDocList);
+
+        $this->assignSimValue($queryTermArray, $resList, $simType);
 
         $this->sortResultList($resList, $sortBy);
+
+
         return $resList;
     }
 
@@ -50,13 +51,32 @@ class MainSearch
         return null;
     }
 
+    private function formDocsVectorList($termsDocList)
+    {
+        $resList = array();
+
+        foreach ($termsDocList as $term => $term_docList) {
+            foreach ($term_docList as $docID => $tf_idf) {
+                $resList[$docID][$term] = $tf_idf;
+            }
+        }
+
+        return $resList;
+    }
+
     /**
      * @param $queryVector
      * @param $resultList
      */
-    private function assignSimValue($queryVector, &$resultList)
+    private function assignSimValue($queryTermArray, &$resultList, $simType)
     {
+        $simCalculator = new SimCalculator();
+        $queryVector = array();
+        $simCalculator->loadVector($queryTermArray, $queryVector, true);
 
+        foreach ($resultList as $docID => $vector) {
+            $resultList[$docID]['simVal'] = $simCalculator->GetSimOfTwoVector($queryVector, $resultList[$docID], $simType);
+        }
     }
 
     /**
