@@ -68,18 +68,32 @@
         </form>
     </div>
     <div id="resultArea" class="resultArea col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+
+    <?php
+    if ($_POST["SUB"] == true) {
+        ?>
         <div class="resultObject row" id="3" srcid="1599">
             <h3 class="t"><a href="http://www.baidu.com" target="_blank">Answer's Name</a></h3>
+
             <div class="c-abstract">
                 <p>
-                    <span class="time">2014年12月23日&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+                    <span
+                        class="time">2014年12月23日&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>
                     <span class="time">相似度&nbsp;-&nbsp;</span>
                 </p>
-                <p>如题,<term>bootstrap</term>3如何创建一个<term>footer</term>,或者一个总是在页面底部的div?查看了文档好像并没有这方面的class,求指教。</p>
+
+                <p>如题,
+                    <term>bootstrap</term>
+                    3如何创建一个
+                    <term>footer</term>
+                    ,或者一个总是在页面底部的div?查看了文档好像并没有这方面的class,求指教。
+                </p>
             </div>
         </div>
-    <?php
-
+        <?php
+    } else {
+        echo '<b>' . "result to show" . '</b>';
+    }
     ?>
     </div>
 

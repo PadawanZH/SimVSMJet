@@ -23,7 +23,7 @@ class MainSearch
      * @param $sortBy   String ["similarity","time"]
      * @return array : list of result
      */
-    public function search($queryString, $simType, $sortBy)
+    public function search($queryString, $simType, $sortBy, $topN)
     {
         $resList = "";//simVal(similarity Value), title, url, time, abstract}
         $wordSplit = new WordSplit($queryString);
@@ -37,6 +37,9 @@ class MainSearch
 
         $this->sortResultList($resList, $sortBy);
 
+        $resList = $this->getTopNResult($resList, $topN);
+
+        //get True content of topN resList
 
         return $resList;
     }
@@ -60,7 +63,6 @@ class MainSearch
                 $resList[$docID][$term] = $tf_idf;
             }
         }
-
         return $resList;
     }
 
@@ -114,5 +116,17 @@ class MainSearch
         } else if ($a->simVal == $b->simVal) {
             return 0;
         }
+    }
+
+    private function getTopNResult($requestList, $N)
+    {
+        $resList = array();
+
+        $requestList = array_slice($requestList, 0, $N);
+        foreach ($requestList as $docID => $item) {
+            $resList[$docID] = $item['simVal'];
+        }
+
+        return $resList;
     }
 }

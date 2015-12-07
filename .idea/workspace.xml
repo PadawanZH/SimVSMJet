@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="947c1e67-b6a9-44ed-9e13-deb3446e8d19" name="Default" comment="Main Search">
+    <list default="true" id="947c1e67-b6a9-44ed-9e13-deb3446e8d19" name="Default" comment="Complete the Main Search">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Class/Action/MainSearch.php" afterPath="$PROJECT_DIR$/Class/Action/MainSearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Class/Func/SimCalculator.php" afterPath="$PROJECT_DIR$/Class/Func/SimCalculator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/SearchPage.php" afterPath="$PROJECT_DIR$/Pages/SearchPage.php" />
     </list>
     <ignored path="SimVSMJet.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +45,7 @@
             <state vertical-scroll-proportion="-19.40625">
               <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
               <folding>
-                <marker date="1449456428206" expanded="true" signature="1216:1246" placeholder="..." />
+                <marker date="1449456504834" expanded="true" signature="1216:1246" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -54,8 +54,8 @@
       <file leaf-file-name="MainSearch.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Class/Action/MainSearch.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.147202">
-              <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.580292">
+              <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
               <folding>
                 <element signature="e#7#89#0#PHP" expanded="true" />
               </folding>
@@ -63,11 +63,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SearchPage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pages/SearchPage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.34375">
+              <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="SimilarityCal.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/SimilarityCal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.96875">
-              <caret line="99" column="17" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
+            <state vertical-scroll-proportion="-4.4459457">
+              <caret line="51" column="38" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="38" />
               <folding>
                 <marker date="1449384847200" expanded="true" signature="2362:2392" placeholder="..." />
                 <marker date="1449384847200" expanded="true" signature="2864:2894" placeholder="..." />
@@ -105,8 +115,9 @@
         <option value="$PROJECT_DIR$/Pages/SimilarityCal.php" />
         <option value="$PROJECT_DIR$/css/SimilarityCal.css" />
         <option value="$PROJECT_DIR$/css/stick-footer.css" />
-        <option value="$PROJECT_DIR$/Class/Action/MainSearch.php" />
         <option value="$PROJECT_DIR$/Class/Func/SimCalculator.php" />
+        <option value="$PROJECT_DIR$/Pages/SearchPage.php" />
+        <option value="$PROJECT_DIR$/Class/Action/MainSearch.php" />
       </list>
     </option>
   </component>
@@ -332,7 +343,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449403338014</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Complete the Main Search">
+      <created>1449456505026</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1449456505026</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -341,6 +358,8 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19583334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -348,9 +367,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -377,7 +394,8 @@
     <MESSAGE value="sql脚本初稿" />
     <MESSAGE value="修正tf值为频率" />
     <MESSAGE value="Main Search" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main Search" />
+    <MESSAGE value="Complete the Main Search" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete the Main Search" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -390,7 +408,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1449456428206" expanded="true" signature="1216:1246" placeholder="..." />
+            <marker date="1449456504834" expanded="true" signature="1216:1246" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -429,7 +447,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1449456428206" expanded="true" signature="1216:1246" placeholder="..." />
+            <marker date="1449456504834" expanded="true" signature="1216:1246" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -468,7 +486,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
           <folding>
-            <marker date="1449456428206" expanded="true" signature="1216:1246" placeholder="..." />
+            <marker date="1449456504834" expanded="true" signature="1216:1246" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -488,7 +506,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
           <folding>
-            <marker date="1449456428206" expanded="true" signature="1216:1246" placeholder="..." />
+            <marker date="1449456504834" expanded="true" signature="1216:1246" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -508,7 +526,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
           <folding>
-            <marker date="1449456428206" expanded="true" signature="1216:1246" placeholder="..." />
+            <marker date="1449456504834" expanded="true" signature="1216:1246" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -528,7 +546,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
           <folding>
-            <marker date="1449456428206" expanded="true" signature="1216:1246" placeholder="..." />
+            <marker date="1449456504834" expanded="true" signature="1216:1246" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -548,7 +566,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding>
-            <marker date="1449456428206" expanded="true" signature="1216:1246" placeholder="..." />
+            <marker date="1449456504834" expanded="true" signature="1216:1246" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -565,7 +583,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1449456428206" expanded="true" signature="1216:1246" placeholder="..." />
+            <marker date="1449456504834" expanded="true" signature="1216:1246" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -619,13 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/SearchPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.027980534">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/SimilarityCal.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3917275">
@@ -659,10 +670,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Class/Func/SimCalculator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.40625">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <folding>
+            <marker date="1449456504834" expanded="true" signature="1216:1246" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Pages/SimilarityCal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.96875">
-          <caret line="99" column="17" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
+        <state vertical-scroll-proportion="-4.4459457">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="38" />
           <folding>
             <marker date="1449384847200" expanded="true" signature="2362:2392" placeholder="..." />
             <marker date="1449384847200" expanded="true" signature="2864:2894" placeholder="..." />
@@ -670,20 +691,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class/Func/SimCalculator.php">
+    <entry file="file://$PROJECT_DIR$/Pages/SearchPage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.40625">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding>
-            <marker date="1449456428206" expanded="true" signature="1216:1246" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-16.34375">
+          <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Class/Action/MainSearch.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.147202">
-          <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.580292">
+          <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
           <folding>
             <element signature="e#7#89#0#PHP" expanded="true" />
           </folding>
