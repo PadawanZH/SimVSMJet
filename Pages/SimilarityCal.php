@@ -112,12 +112,6 @@ function computeTheSimValue()
 }
 
 ?>
-<footer class="footer">
-    <div class="container">
-        <p class="text-muted"> <a href="./SearchPage.php">About us</a></p>
-    </div>
-</footer>
-</body>
 <link rel="stylesheet" href="../BootStrap/dist/css/bootstrap.min.css">
 <link href="../css/SimilarityCal.css" rel="stylesheet">
 <link rel="stylesheet" href="../css/stick-footer.css">

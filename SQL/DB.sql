@@ -27,10 +27,3 @@ CREATE TABLE IF NOT EXISTS doc_terms
     CONSTRAINT FOREIGN KEY (WORD) REFERENCES terms(WORD)
 );
 
-LOAD DATA INFILE '/home/tevenfeng/Coding/php/TxtIntoSql/document.txt' IGNORE INTO TABLE document FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
-LOAD DATA INFILE '/home/tevenfeng/Coding/php/TxtIntoSql/terms.txt' IGNORE INTO TABLE terms FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
-LOAD DATA INFILE '/home/tevenfeng/Coding/php/TxtIntoSql/doc_terms.txt' IGNORE INTO TABLE doc_terms FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
-
-select * from document;
-select * from terms;
-select * from doc_terms;

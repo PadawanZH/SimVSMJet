@@ -90,20 +90,6 @@ require_once $dir . '/../Class/Action/MainSearch.php';
                 <h3 class="t"><a href="<?php echo 'http://' . $item['url'] ?>"
                                  target="_blank"><?php echo $item['title'] ?></a></h3>
 
-            <div class="c-abstract">
-                <p>
-                    <span
-                        class="time">2014年12月23日&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>
-                    <span class="time">相似度&nbsp;-&nbsp;</span>
-                </p>
-
-                <p>如题,
-                    <term>bootstrap</term>
-                    3如何创建一个
-                    <term>footer</term>
-                    ,或者一个总是在页面底部的div?查看了文档好像并没有这方面的class,求指教。
-                </p>
-            </div>
         </div>
 
         <?php
@@ -111,11 +97,6 @@ require_once $dir . '/../Class/Action/MainSearch.php';
     }
     ?>
     </div>
-    <footer class="footer">
-        <div class="container">
-            <p class="text-muted"> <a href="./SearchPage.php">About us</a></p>
-        </div>
-    </footer>
 </body>
 <link rel="stylesheet" href="../BootStrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/SearchPage.css">
