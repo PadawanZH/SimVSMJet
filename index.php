@@ -11,6 +11,7 @@ include 'Class/Func/WordSplit.php';
 include 'Class/Action/MainSearch.php';
 
 header("Location: http://123.57.24.110/Pages/SearchPage.php");
+//header("Location: http://localhost:9000/Pages/SearchPage.php");
 /*
 
 */

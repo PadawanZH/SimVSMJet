@@ -37,7 +37,7 @@ class DocumentContent
             //var_dump($result);
 
             $arr[$docID] = [
-                "SimVal" => $SimVal,
+                "simVal" => $SimVal,
                 "title" => $result[0]["TITLE"],
                 "url" => $result[0]["URL"]
             ];

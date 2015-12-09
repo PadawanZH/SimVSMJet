@@ -26,7 +26,7 @@ class MainSearch
      * @param $sortBy   String ["similarity","time"]
      * @return array : list of result
      */
-    public function search($queryString, $simType, $sortBy, $topN)
+    public function search($queryString, $simType, $sortBy, $topN, &$actualResultCount)
     {
         $resList = "";//simVal(similarity Value), title, url, time, abstract}
         $wordSplit = new WordSplit($queryString);
@@ -39,6 +39,8 @@ class MainSearch
         $this->assignSimValue($queryTermArray, $resList, $simType);
 
         $this->sortResultList($resList, $sortBy);
+
+        $actualResultCount = count($resList);
         $resList = $this->getTopNResult($resList, $topN);
 
         //get True content of topN resList

@@ -23,10 +23,15 @@ body {
 }
 
 .resultObject {
-    margin-top: 1%;
+    margin-top: 3%;
 }
 
 term {
     font-style: normal;
     color: #C00;
+}
+
+.term {
+    font-style: normal;
+    color: #cc4537;
 }
