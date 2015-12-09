@@ -31,18 +31,15 @@ require_once $dir . '/../Class/Action/MainSearch.php';
 </div>
 <div id="SearchFormArea">
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <div class="iconDiv row">
-            <span
-                class="col-lg-2 col-lg-offset-4 col-md-2 col-md-offset-4 col-sm-2 col-sm-offset-4 col-xs-2 col-xs-offset-3">
-                <img hidefocus="true" src="//img1.gtimg.com/edu/pics/hv1/122/126/1929/125465477.jpg" width="400"
-                     height="128">
-            </span>
+        <div class="iconDiv row" align="center">
+            <img hidefocus="true" src="//img1.gtimg.com/edu/pics/hv1/122/126/1929/125465477.jpg" width="400"
+                 height="128">
         </div>
 
         <div class="searchFormDiv row input-group-lg">
             <span
                 class="col-lg-5 col-lg-offset-3 col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-2 col-xs-5 col-xs-offset-2">
-                <input id="Query" name="Query" class="form-control input-lg" value="" maxlength="255" autocomplete="off"
+                <input id="Query" name="Query" class="form-control input-lg" value="<?php if($_POST["SUB"] == true){echo $_POST["Query"];} ?>" maxlength="255" autocomplete="off"
                        placeholder="input query expression">
             </span>
             <span class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
@@ -55,7 +52,7 @@ require_once $dir . '/../Class/Action/MainSearch.php';
             <div
                 class="col-lg-3 col-lg-offset-3 col-md-3 col-md-offset-3 col-sm-3 col-sm-offset-3 col-xs-3 col-xs-offset-3">
                 <label class="control-label">相似度计算方式</label>
-                <select class="input-xlarge" name="simType">
+                <select class="input-xlarge" name="simType" value="<?php if($_POST["SUB"] == true){echo $_POST["simType"];} ?>">
                     <option value="innerProduct">Inner product</option>
                     <option value="cosine">Cosine</option>
                     <option value="jaccard">Jaccard</option>
@@ -65,7 +62,7 @@ require_once $dir . '/../Class/Action/MainSearch.php';
 
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                 <label class="control-label">结果最大限制</label>
-                <select class="input-xlarge" name="topN">
+                <select class="input-xlarge" name="topN" value="<?php if($_POST["SUB"] == true){echo $_POST["topN"];} ?>">
                     <option value="100">100</option>
                     <option value="1000">1000</option>
                     <option value="100000">不限制</option>
